@@ -15,20 +15,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path, include
-from cardquest.views import (
-    HomePageView,
-    TrainerList,
-    CollectionListView,
-    PokemonCardListView,
-    TrainerCreateView,
-)
+from django.urls import path
+from cardquest import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', HomePageView.as_view(), name='home'),
-    path('trainer_list/', TrainerList.as_view(), name='trainer_list'),
-    path('trainer_list/add', TrainerCreateView.as_view(), name='trainer_add'),
-    path('pokemon_card/', PokemonCardListView.as_view(), name='pokemon_card'),
-    path('collection/', CollectionListView.as_view(), name='collection'),
+    path('', views.HomePageView.as_view(), name='home'),
+    path('trainer_list', views.TrainerListView.as_view(), name='trainer-list'),
+    path('collection_list', views.CollectionListView.as_view(), name='collection-list'),
+    path('pokemon_card', views.PokemonCardListView.as_view(), name='pokemon-card'),
+    path('trainer_list/add', views.TrainerCreateView.as_view(), name='trainer-add'),
+    path('trainer_list/<pk>', views.TrainerUpdateView.as_view(), name='trainer-update'),
+    path('trainer_list/<pk>/delete', views.TrainerDeleteView.as_view(), name='trainer-delete'),
+    path('pokemoncard_list', views.PokemonCardListView.as_view(), name='pokemoncard-list'),
+    path('collection_list/add', views.CollectionCreateView.as_view(), name='collection-add'),
+    path('collection_list/<pk>', views.CollectionUpdateView.as_view(), name='collection-update'),
+    path('collection_list/<pk>/delete', views.CollectionDeleteView.as_view(), name='collection-delete'),
 ]

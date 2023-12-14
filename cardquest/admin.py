@@ -1,10 +1,7 @@
 from django.contrib import admin
+from .models import PokemonCard, Trainer, Collection
 
 # Register your models here.
-from .models import PokemonCard
-from .models import Trainer
-from .models import Collection
-
 @admin.register(PokemonCard)
 class PokemonAdmin(admin.ModelAdmin):
     list_display = ("name", "rarity", "hp", "card_type", "attack", "description", "weakness", "card_number", "release_date", "evolution_stage", "abilities")
