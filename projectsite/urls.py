@@ -15,8 +15,20 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from cardquest.views import (
+    HomePageView,
+    TrainerList,
+    CollectionListView,
+    PokemonCardListView,
+    TrainerCreateView,
+)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', HomePageView.as_view(), name='home'),
+    path('trainer_list/', TrainerList.as_view(), name='trainer_list'),
+    path('trainer_list/add', TrainerCreateView.as_view(), name='trainer_add'),
+    path('pokemon_card/', PokemonCardListView.as_view(), name='pokemon_card'),
+    path('collection/', CollectionListView.as_view(), name='collection'),
 ]
