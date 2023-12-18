@@ -22,7 +22,10 @@ class PokemonCardListView(ListView):
     context_object_name = 'pokemoncard'
     template_name = 'pokemoncards.html'
     json_file_path = './data/pokemon_data.json'
+<<<<<<< HEAD
     paginate_by = 5
+=======
+>>>>>>> 44354977abf3204bc7af21707e4fa34cbb55359a
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -52,7 +55,11 @@ class CollectionListView(ListView):
     model = Collection
     context_object_name = 'collection'
     template_name = 'collection.html'
+<<<<<<< HEAD
     paginate_by = 5
+=======
+    paginate_by = 3
+>>>>>>> 44354977abf3204bc7af21707e4fa34cbb55359a
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
