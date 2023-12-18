@@ -79,19 +79,20 @@ footer {
   margin: 1%;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  flex-direction: column;
 }
 
 .trainers-container table {
   border-collapse: collapse;
   background-color: white;
   border: 2px solid #dddddd;
+  
 }
 
 .trainers-container th,
 .trainers-container td {
   border: 1px solid #dddddd;
-  text-align: left;
+  text-align: center;
   padding: 8px;
 }
 
@@ -111,6 +112,14 @@ footer {
 .trainers-container td b {
   color: #000000;
 }
+.include .pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+ 
 
 /*-----------------------------COLLECTION_PAGE---------------------------------*/
 .collection-container {

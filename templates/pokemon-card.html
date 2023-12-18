@@ -1,5 +1,37 @@
-{% include 'includes/base.html' %}
-
+{% extends "base.html" %}
+<a href="{% url 'Pokemoncards_add' %}">Add a new Pokemon Card</a>
+{% block content %}
+    <h1>Pokemon Cards</h1>
+    <table>
+        <tr>
+            <th>Card Name</th>
+            <th>HP</th>
+            <th>Card Type</th>
+            <th>Attack</th>
+            <th>Description</th>
+            <th>Weakness</th>
+            <th>Abilities</th>
+            <th>Action</th>
+        </tr>
+        {% for pokemoncard in pokemoncards %}
+        <tr>
+            <td>{{ pokemoncard.name }}</td>
+            <td>{{ pokemoncard.hp }}</td>
+            <td>{{ pokemoncard.card_type }}</td>
+            <td>{{ pokemoncard.attack }}</td>
+            <td>{{ pokemoncard.description }}</td>
+            <td>{{ pokemoncard.weakness }}</td>
+            <td>{{ pokemoncard.abilities }}</td>
+            <td>
+                <a href="pokemoncards/{{ pokemoncard.id }}edit" >Edit</a> |
+                <a href="pokemoncards/{{ pokemoncard.id }}/delete" >Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="8">No pokemon cards found</td>
+        </tr>
+        {% endfor %}
     <main>
       <!--CARDS-->
       <section class="cards-container">
@@ -493,4 +525,4 @@
       </section>
     </main>
 
-  {% include 'includes/footer.html' %}
+    {% include "includes/footer.html" %}

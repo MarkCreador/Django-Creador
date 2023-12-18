@@ -73,8 +73,19 @@ class Command(BaseCommand):
         card20 = PokemonCard(name= "Deoxys",rarity= "Rare",hp= 50,card_type= "Pyschic",attack= "Cosmic Power",
                             description= "An alien-like, bipedal Pokemon that has four forms. Each focused on a different stat." ,
                             weakness= "Dark" ,card_number= 186 ,release_date="2004-11-18", evolution_stage= "Basic" ,abilities= "Pressure")
-
-        pokemon_cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10, card11, card12, card13, card14, card15, card16, card17, card18, card19, card20]
+        card21 = PokemonCard(name="Golem",attack= "Rock Throw", rarity= "Rare",hp= 80,card_type= "Rock",description= "A Rock/Ground type Pokemon that evolves from Graveler.", weakness= "Water", card_number= 76, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Rock Head")
+        card22 = PokemonCard(name="Machamp",attack= "Karate Chop", rarity= "Rare",hp= 90,card_type= "Fighting",description= "A Fighting type Pokemon that evolves from Machoke.", weakness= "Psychic", card_number= 68, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Guts")
+        card23 = PokemonCard(name="Gengar",attack= "Shadow Punch", rarity= "Rare",hp= 60,card_type= "Ghost",description= "A Ghost/Poison type Pokemon that evolves from Haunter.", weakness= "Dark", card_number= 94, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Levitate") 
+        card24 = PokemonCard(name="Bulbasaur",attack= "Leech Seed", rarity= "Rare",hp= 45,card_type= "Grass",description= "A Grass/Poison type Pokemon that evolves into Ivysaur.", weakness= "Fire", card_number= 1, release_date= "1996-02-27", evolution_stage= "Basic", abilities= "Overgrow")
+        card25 = PokemonCard(name="Charizard",attack= "Flamethrower", rarity= "Rare",hp= 120,card_type= "Fire",description= "A Fire/Flying type Pokemon that evolves from Charmeleon.", weakness= "Water", card_number= 6, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Blaze")
+        card26 = PokemonCard(name="Blastoise",attack= "Hydro Pump", rarity= "Rare",hp= 120,card_type= "Water",description= "A Water type Pokemon that evolves from Wartortle.", weakness= "Grass", card_number= 9, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Torrent")
+        card27 = PokemonCard(name="Butterfree",attack= "Gust", rarity= "Rare",hp= 70,card_type= "Bug",description= "A Bug/Flying type Pokemon that evolves from Metapod.", weakness= "Fire", card_number= 12, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Compound Eyes")
+        card28 = PokemonCard(name="Metapod",attack="Fire Punch", rarity= "Rare",hp= 70,card_type= "Bug",description= "A Bug type Pokemon that evolves from Caterpie.", weakness= "Fire", card_number= 11, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Shed Skin")
+        card29 = PokemonCard(name="Weedles",attack="Poison Sting", rarity= "Rare",hp= 40,card_type= "Bug",description= "A Bug/Poison type Pokemon that evolves into Kakuna.", weakness= "Fire", card_number= 13, release_date= "1996-02-27", evolution_stage= "Basic", abilities= "Shield Dust")
+        card30 = PokemonCard(name="Kakuna",attack="Poison Sting", rarity= "Rare",hp= 70,card_type= "Bug",description= "A Bug/Poison type Pokemon that evolves from Weedle.", weakness= "Fire", card_number= 14, release_date= "1996-02-27", evolution_stage= "Final", abilities= "Shed Skin")
+        pokemon_cards = [card1, card2, card3, card4, card5, card6, card7, card8, card9, card10,
+                        card11, card12, card13, card14, card15, card16, card17, card18, card19, card20,
+                        card21, card22, card23, card24, card25, card26, card27, card28, card29, card30]
 
         for card in pokemon_cards:
             card.save()
