@@ -31,8 +31,4 @@ urlpatterns = [
     path('collection_list/add', views.CollectionCreateView.as_view(), name='collection-add'),
     path('collection_list/<pk>', views.CollectionUpdateView.as_view(), name='collection-update'),
     path('collection_list/<pk>/delete', views.CollectionDeleteView.as_view(), name='collection-delete'),
-<<<<<<< HEAD
-]
-=======
-]
->>>>>>> 44354977abf3204bc7af21707e4fa34cbb55359a
+    ]
